@@ -41,7 +41,7 @@
 <script setup lang="ts">
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonInput, IonItem, IonList, IonLabel, IonIcon, IonButton, IonAvatar } from '@ionic/vue';
 import { exit } from 'ionicons/icons';
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 import TabsMenu from '@/components/TabsMenu.vue';
 import { useAuthStore } from '@/stores/auth';
 
@@ -52,10 +52,10 @@ const logout = () => {
     authStore.logout();
 };
 
-const userPhoto = ref(user.value?.photoURL || 'https://ionicframework.com/docs/img/demos/avatar.svg');
+const userPhoto = ref(user.value?.photoURL || 'https://lh3.googleusercontent.com/a/ACg8ocI7sWPODdQ_n4wZG4dWeSMhuCQ7DvZt_2WDKslZrZlq1yZ2PEx4=s288-c-no');
 
 function handleImageError() {
-    userPhoto.value = 'https://ionicframework.com/docs/img/demos/avatar.svg';
+    userPhoto.value = 'https://lh3.googleusercontent.com/a/ACg8ocI7sWPODdQ_n4wZG4dWeSMhuCQ7DvZt_2WDKslZrZlq1yZ2PEx4=s288-c-no';
 }
 </script>
 
