@@ -214,3 +214,37 @@ Komponen `HomePage.vue` menampilkan daftar Todo dan menangani operasi CRUD:
 - Pengguna membaca Todo: Data Todo diambil dari Firestore dan ditampilkan di aplikasi.
 - Pengguna menghapus Todo: Todo dihapus dari Firestore melalui firestoreService.
 - Pengguna mengubah status Todo: Status Todo diperbarui di Firestore melalui firestoreService.
+
+#### Build APK
+![Screenshots](buildapk.png)
+
+Langkah-Langkah:
+1. Masuk ke Direktori Proyek
+Pindah ke direktori proyek Ionic Anda:
+
+cd path/to/your/ionic-project
+
+2. Pastikan Proyek Siap Dibangun
+Jalankan perintah berikut untuk memastikan proyek dapat dibangun:
+
+ionic build --prod
+
+3. Tambahkan Platform Android (Jika Belum Ada)
+Jika platform Android belum ditambahkan, tambahkan dengan perintah:
+
+ionic capacitor add android
+
+npx cap sync android
+
+4. Buka Proyek di Android Studio
+Buka proyek Android Anda dengan Android Studio:
+
+npx cap open android
+
+5. Build APK di Android Studio
+Setelah proyek terbuka di Android Studio:
+
+Pilih menu Build > Build Bundle(s)/APK(s) > Build APK(s).
+Tunggu hingga proses selesai.
+APK hasil build akan berada di direktori:
+android/app/build/outputs/apk/
